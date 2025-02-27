@@ -97,3 +97,15 @@ authors.sort((a, b) => a.age - b.age);
 
 console.log(authors);
 
+/* Snack 4 */
+
+const age = authors.map(author => author.age)
+
+const ageSum = age.reduce((sum, age) => sum + age, 0)
+
+avarageAge = ageSum / age.length
+
+console.log(avarageAge);
+
+
+
