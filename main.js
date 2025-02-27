@@ -73,3 +73,27 @@ const fullPricedBook = discountedBooks.find(book => Number.isInteger(book.price)
 console.log("Available Books:", availableBooks);
 console.log("Discounted Books:", discountedBooks);
 console.log("First Fully Priced Book:", fullPricedBook);
+
+/* Snack 3 */
+
+const authors = [
+    { name: "J.K. Rowling", age: 58 },
+    { name: "George Orwell", age: 46 },
+    { name: "J.R.R. Tolkien", age: 81 },
+    { name: "Agatha Christie", age: 85 },
+    { name: "Stephen King", age: 76 },
+    { name: "Gabriel García Márquez", age: 87 },
+    { name: "Haruki Murakami", age: 75 },
+    { name: "Jane Austen", age: 41 },
+    { name: "Ernest Hemingway", age: 61 },
+    { name: "Leo Tolstoy", age: 82 }
+];
+
+const areAuthorsAdults = authors.every(author => author.age >= 18);
+
+console.log("Are all authors adults? ", areAuthorsAdults);
+
+authors.sort((a, b) => a.age - b.age);
+
+console.log(authors);
+
