@@ -53,3 +53,23 @@ console.log(longBooks);
 const longBooksTitles = longBooks.map(book => book.title)
 console.log(longBooksTitles);
 
+/* Snack 2 */
+
+const availableBooks = [
+    { title: "Il Signore degli Anelli", price: 25.99 },
+    { title: "1984", price: 15.50 },
+    { title: "Il Piccolo Principe", price: 10.00 },
+    { title: "Moby Dick", price: 18.75 },
+    { title: "Orgoglio e Pregiudizio", price: 22.30 }
+];
+
+const discountedBooks = availableBooks.map(book => ({
+    ...book,
+    price: parseFloat((book.price * 0.8).toFixed(2))
+}));
+
+const fullPricedBook = discountedBooks.find(book => Number.isInteger(book.price));
+
+console.log("Available Books:", availableBooks);
+console.log("Discounted Books:", discountedBooks);
+console.log("First Fully Priced Book:", fullPricedBook);
